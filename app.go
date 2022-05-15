@@ -12,7 +12,7 @@ type mySingleLinkedList struct {
 	head *node
 }
 
-func (s *mySingleLinkedList) addFront(name string) {
+func (s *mySingleLinkedList) addToHead(name string) {
 	newNode := &node{
 		data: name,
 	}
@@ -24,7 +24,7 @@ func (s *mySingleLinkedList) addFront(name string) {
 	}
 	s.size++
 }
-func (s *mySingleLinkedList) addBack(name string) {
+func (s *mySingleLinkedList) addToTail(name string) {
 	newNode := &node{
 		data: name,
 	}
@@ -52,10 +52,10 @@ func newLinkedList() *mySingleLinkedList {
 
 func main() {
 	singleList := newLinkedList()
-	singleList.addFront("Maya")
-	singleList.addFront("Dani")
-	singleList.addFront("Victor")
-	singleList.addBack("Zupri")
+	singleList.addToHead("Maya")
+	singleList.addToHead("Dani")
+	singleList.addToTail("Victor")
+	singleList.addToTail("Zupri")
 	singleList.iterateList()
 	fmt.Println(singleList.size)
 }
